@@ -4,6 +4,18 @@
 
 A boilerplate template to get started with GTK, Rust, Meson, Flatpak made for GNOME. It can be adapted for other desktop environments like elementary.
 
+Development
+```bash
+export GETTEXT_DIR=$(brew --prefix)/opt/gettext
+export PKG_CONFIG_PATH=$(brew --prefix)/lib/pkgconfig
+meson setup builddir -Dprofile=development --prefix=$HOME/.local
+meson install -C builddir
+
+# Run 
+~/.local/bin/gtk-rust-template
+```
+
+
 <div align="center">
 
 ![Main window](data/resources/screenshots/screenshot1.png "Main window")
